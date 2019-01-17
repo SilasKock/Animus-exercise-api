@@ -6,7 +6,6 @@ namespace Animus.exercise.api.Model
     {
         public ApartmentsContext(DbContextOptions<ApartmentsContext> options) : base(options)
         {
-
         }        
 
         public DbSet<ApartmentsDTO> Apartments { get; set; }
