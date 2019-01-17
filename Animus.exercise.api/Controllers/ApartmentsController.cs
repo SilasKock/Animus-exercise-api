@@ -22,7 +22,7 @@ namespace Animus.exercise.api.Controllers
                 _context.Apartments.Add(new ApartmentsDTO()
                 {
                     id = 1,
-                    abailable = "01.05.2019",
+                    available = "01.05.2019",
                     street = "Wallstreet",
                     plz = 22880,
                     place = "Wedel",
@@ -38,7 +38,7 @@ namespace Animus.exercise.api.Controllers
                 new ApartmentsDTO()
                 {
                     id = 1,
-                    abailable = "01.05.2019",
+                    available = "01.05.2019",
                     street = "Wallstreet",
                     plz = 22880,
                     place = "Wedel",
@@ -48,7 +48,7 @@ namespace Animus.exercise.api.Controllers
                 new ApartmentsDTO()
                 {
                     id = 2,
-                    abailable = "01.08.2019",
+                    available = "01.08.2019",
                     street = "Luckstreet",
                     plz = 22880,
                     place = "Wedel",
@@ -58,7 +58,7 @@ namespace Animus.exercise.api.Controllers
                 new ApartmentsDTO()
                 {
                     id = 3,
-                    abailable = "01.02.2019",
+                    available = "01.02.2019",
                     street = "Richardstraße",
                     plz = 40472,
                     place = "Düsseldorf",

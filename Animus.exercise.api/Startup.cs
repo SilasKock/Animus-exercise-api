@@ -22,6 +22,14 @@ namespace Animus.exercise.api
         {
             // Register DbContext
             services.AddDbContext<ApartmentsContext>(opt => opt.UseInMemoryDatabase("Apartments"));
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -37,8 +45,10 @@ namespace Animus.exercise.api
                 app.UseHsts();
             }
 
+            
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseCors("CorsPolicy");
+            app.UseMvc();            
         }
     }
 }
